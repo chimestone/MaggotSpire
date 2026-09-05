@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "MaggotSpire: Build",
+      "type": "process",
+      "command": "dotnet",
+      "args": ["build", "${workspaceFolder}/MaggotSpire.csproj"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "MaggotSpire: Deploy",
+      "type": "process",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/tools/Deploy-Mod.ps1"
+      ],
+      "dependsOn": "MaggotSpire: Build",
+      "problemMatcher": []
+    },
+    {
+      "label": "MaggotSpire: Launch Dev Game",
+      "type": "process",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/tools/Launch-Game.ps1"
+      ],
+      "dependsOn": "MaggotSpire: Deploy",
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+; Engine configuration file.
+; Edit through Godot when possible because not all parameters are self-explanatory.
+
+config_version=5
+
+[application]
+
+config/name="MaggotSpire"
+
+[dotnet]
+
+project/assembly_name="MaggotSpire"
+
+[rendering]
+
+renderer/rendering_method="mobile"
+renderer/rendering_method.mobile="mobile"
+
