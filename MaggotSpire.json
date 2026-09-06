@@ -1,13 +1,15 @@
 {
   "id": "MaggotSpire",
   "name": "Slay the Maggot Spire",
-  "author": "钟磬",
+  "author": "chime stone",
   "description": "Damage doesn't disappear. It burrows into your deck.",
   "version": "0.1.0",
   "min_game_version": "0.107.1",
   "has_pck": false,
   "has_dll": true,
-  "dependencies": [],
+  "dependencies": [{
+    "id": "STS2-RitsuLib",
+    "min_version": "0.5.2"
+  }],
   "affects_gameplay": true
 }
-
